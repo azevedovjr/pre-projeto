@@ -1,0 +1,120 @@
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Cabeçalho */
+.site-header {
+    width: 100%;
+    height: 94px;
+    background: linear-gradient(110deg, #292c35, #242730);
+    display: flex;
+    align-items: center;
+}
+
+/* Container principal */
+.container {
+    width: 100%;
+    max-width: 1162px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    color: #f4f4f6;
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+/* Letra F */
+.logo-ascent {
+    color: #ff6269;
+}
+
+/* Texto DIAS antes do G */
+.logo-descent::before {
+    content: "DIAS";
+    color: #f4f4f6;
+}
+
+/* Letra G */
+.logo-descent {
+    color: #ff6269;
+}
+
+/* Menu de navegação */
+.site-nav {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.site-nav ul li a {
+    color: #a6a6b5;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.site-nav ul li a:hover {
+    color: #ff6269;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .site-header {
+        height: auto;
+        min-height: 94px;
+        padding: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .site-nav {
+        position: static;
+        transform: none;
+    }
+
+    .site-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .site-nav ul li a {
+        font-size: 14px;
+    }
+}
